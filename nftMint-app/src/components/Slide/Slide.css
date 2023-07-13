@@ -34,3 +34,12 @@
     cursor: grab;
     overflow: hidden;
 }
+
+/* BUTTON-MINT */
+
+.button-mint {
+    width: 930px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
