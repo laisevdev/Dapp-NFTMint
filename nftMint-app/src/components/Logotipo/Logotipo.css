@@ -1,0 +1,14 @@
+.image {
+    width: 80px;
+    height: 80px;
+    margin-right: 60px;
+    cursor: pointer;
+
+    animation: rotacao 25s linear infinite;
+}
+
+@keyframes rotacao {
+       to {
+        transform: rotate(360deg);
+    }
+}

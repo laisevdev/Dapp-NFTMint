@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:ital@1&family=Roboto:ital,wght@1,700&display=swap');
+
+.navbar {
+   width: 100%;
+   display: flex;
+   justify-content:space-around;
+   margin-top: 35px;
+   position: relative;
+}
+
+
+.gradient, h1 {
+    background-image: linear-gradient(to right, rgb(138, 43, 234), rgb(84, 154, 215), rgb(84, 215, 202));
+
+    background-clip: text;
+    -webkit-background-clip: text;  
+    
+    -webkit-text-fill-color: transparent;
+    font-family: 'Black Ops One', cursive;
+    font-size: 38px;
+    margin-left: 80px;
+    margin-right: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}

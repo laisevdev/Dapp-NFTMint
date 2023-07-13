@@ -1,0 +1,22 @@
+:root {
+  font-family: 'IBM Plex Mono', monospace;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 20px;
+
+  
+  background: linear-gradient(90deg, rgb(28, 1, 66) 8%, rgba(42,3,96,1) 46%, rgba(35,3,79,1) 100%, rgb(28, 1, 66) 100%);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+}
+

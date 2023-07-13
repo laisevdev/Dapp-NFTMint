@@ -1,0 +1,22 @@
+button {
+    height: 45px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 12px;
+    font-family: 'Black Ops One', cursive;
+    background-color: #181818;
+    color: #fafafa;
+    cursor: pointer;
+    transition: border-color 0.25s;
+
+    margin-left: 60px;
+  }
+  
+  button:hover {
+    border-color: #68c8d3;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
