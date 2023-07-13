@@ -2,6 +2,8 @@ import {useState, useEffect, useRef} from 'react'
 import './Slide.css'
 import { motion } from 'framer-motion';
 
+import MintButton from '../MintButton/MintButton';
+
 import img1 from '../../imgs/imgslide/1.jpg'
 import img2 from '../../imgs/imgslide/2.jpg'
 import img3 from '../../imgs/imgslide/3.jpg'
@@ -26,25 +28,33 @@ const Slide= () => {
    }, [])
 
    return (
-      <div className='container'>
-         <motion.div ref={carousel} className='carousel' whileTap={{cursor: 'grabbing'}}>
-            <motion.div className='inner'
-            drag='x'
-            dragConstraints={{right: 0, left: -width}}
-            initial={{ x: 300}}
-            animate={{ x:0}}
-            transition={{ duration: 0.8}}
-            >
+      <>
+         <div className='container'>
+            <motion.div ref={carousel} className='carousel' whileTap={{cursor: 'grabbing'}}>
+               <motion.div className='inner'
+               drag='x'
+               dragConstraints={{right: 0, left: -width}}
+               initial={{ x: 300}}
+               animate={{ x:0}}
+               transition={{ duration: 0.8}}
+               >
 
-               {images.map (image => (
-                  <motion.div key={image}>
-                     <img src= {image} alt='imagens'/>           
-                  </motion.div>
-               ))}
+                  {images.map (image => (
+                     <motion.div key={image}>
+                        <img src= {image} alt='imagens'/>           
+                     </motion.div>
+                  ))}
 
-            </motion.div>
-         </motion.div>
-      </div>
+               </motion.div>
+            </motion.div>         
+         </div>
+
+         <div className='button-mint'>
+            <MintButton />
+         </div>
+         
+      </>
+          
    )    
   
   }
