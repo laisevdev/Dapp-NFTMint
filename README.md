@@ -1,7 +1,5 @@
 # Dapp NFTMint
 
-## Dapp NFTNoob
-
 ### About the Project 
 
 #### This is a decentralized application project where users can mint an NFT (Non-fungible Token) in the standard ERC721, on the Polygon Blockchain network (Polygon Mumbai testnet).
