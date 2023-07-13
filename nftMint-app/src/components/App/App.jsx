@@ -1,7 +1,6 @@
 import './App.css';
 import Navbar from '../Navbar/Navbar';
 import Slide from '../Slide/Slide';
-import MintButton from '../MintButton/MintButton';
 import SocialMedia from '../SocialMedia/Media'
 
 
@@ -12,7 +11,6 @@ const App = () => {
     <>
       <Navbar />
       <Slide />
-      <MintButton />
       <SocialMedia />
     </>
     
