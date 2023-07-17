@@ -1,7 +1,7 @@
 require("dotenv").config();
+
 require("@nomicfoundation/hardhat-toolbox");
 
-require ("hardhat-watcher");
 
 module.exports = {
   solidity: "0.8.13",
@@ -9,15 +9,15 @@ module.exports = {
     hardhat: {
       chainId: 1337,
     },
+    sepolia: {
+      url: process.env.STAGING_ALCHEMY_KEY,
+      accounts: [process.env.PRIVATE_KEY],
+    },
   },
-  watcher: {
-    compilation: {
-      tasks: ["compile"],
-    },
-    test: {
-      tasks: [{ command: "test", params: { testFiles: ["{path}"] } }],
-      files: ["./test/**/*"],
-      verbose: true,
-    },
+  paths: {
+    sources: "./contracts",
+    tests: "./test",
+    cache: "./cache",
+    artifacts: "./artifacts"
   },
 };
