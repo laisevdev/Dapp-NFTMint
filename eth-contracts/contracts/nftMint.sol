@@ -24,15 +24,14 @@ contract MyNFT is ERC721 {
         owner = msg.sender;
     }
 
-    function mint(address buyer, uint256 amount) public payable {
+    function mint(uint256 amount) public payable {
         priceTotal = amount * price;
         require(msg.value == priceTotal, "Enough Balance");
 
         for(uint256 i =0; i < amount; i++) {
             id += 1;
-            _safeMint(buyer, id);
+            _safeMint(msg.sender, id);
         }
-
     }
 
     function supplyTotal() public view returns (uint256) {
