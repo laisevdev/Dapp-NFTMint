@@ -1,5 +1,4 @@
 import './ConnectButton.css'
-import { ethers } from 'ethers'
 import { useState } from 'react';
 
 
@@ -10,10 +9,15 @@ const ConnectButton = () => {
   async function connecWallet(){
     setMessage("")    
     if(!window.ethereum) return setMessage("Carteira não encontrada");
+    console.log("Carteira encontrada")
 
-    const provider = new ethers.providers.web3Provider(window.ethereum);
-    const accounts = await provider.send("eth_requestAccounts", []);
-    if(!accounts || !accounts.length) return setMessage("Carteira não autorizada")
+    
+    const accounts = await window.ethereum.request({ method: "eth_accounts" })
+    if(!accounts.length !== 0) {
+      const account = accounts[0]
+      console.log("Encontramos uma carteira autorizada", account)
+      return setMessage("Conectada")
+    } 
 
   }
 
