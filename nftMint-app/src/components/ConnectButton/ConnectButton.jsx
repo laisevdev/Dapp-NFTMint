@@ -6,7 +6,7 @@ const ConnectButton = () => {
 
   const [message, setMessage] = useState("");
 
-  async function connecWallet(){
+  async function connectWallet(){
     setMessage("")    
     if(!window.ethereum) return setMessage("Carteira não encontrada");
     console.log("Carteira encontrada")
@@ -23,7 +23,7 @@ const ConnectButton = () => {
 
   return (
     <div> 
-        <button type='button' onClick={connecWallet}>Conectar Carteira</button> 
+        <button type='button' onClick={connectWallet}>Conectar Carteira</button> 
         <br/>
         <p>{message}</p>
     </div>
