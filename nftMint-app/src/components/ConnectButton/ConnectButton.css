@@ -10,7 +10,6 @@ button {
     cursor: pointer;
     transition: border-color 0.25s;
 
-    margin-left: 60px;
   }
   
   button:hover {
@@ -20,3 +19,8 @@ button {
   button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
+
+  @media (max-width:1024px) {
+    button {margin-right: 25px;
+  }
+}
