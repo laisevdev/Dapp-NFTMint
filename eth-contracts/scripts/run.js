@@ -6,17 +6,21 @@ const main = async () => {
   console.log("Endereço do Contrato:", await token.getAddress());
     // Chama a função.
     const mintAmount = 1;
-    const uri = "https://ipfs.io/ipfs/Qmc2NJLkBumcL1G4VrYKn6b1rFm1EVvA7RHsh1TdqZTfXG/";
-    let txn = await token.mint(mintAmount, uri, {
-      value: BigInt("1000000000000000") * BigInt(mintAmount),
+    const uri = "https://ipfs.io/ipfs/bafybeihtixxgkce64vg6fe32v2knumoprw24qje543mvoroirenbjnjrxi/";
+    let mintjpg = await token.mint(mintAmount, uri, {
+      value: BigInt("10000000000000000") * BigInt(mintAmount),
     });
+    console.log("Cunhando...espere por favor.")
 
     // Espera ela ser minerada.
-    await txn.wait();
-    console.log("1-", txn)
+    await mintjpg.wait();
+    console.log("1-NFT MINTADO", mintjpg, mintAmount, uri)
+    console.log("NFT Cunhado, veja o hash da transação", mintjpg.hash) 
 
-    await txn.wait();
-    console.log("2-", txn)
+
+    await mintjpg.wait();
+    console.log("2-NFT MINTADO", mintjpg, mintAmount, uri)
+    console.log("2-NFT Cunhado, veja o hash da transação", mintjpg.hash) 
   };
 
   const runMain = async () => {
