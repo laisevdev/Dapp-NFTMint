@@ -7,22 +7,24 @@ import abi from '../../utils/nftMint.json';
 const MintButton = () => {
 
 
-  const contract_address = "0xD305E2f4978490FA8B231D3630F7097b38B69c17"
+  const contract_address = "0x5135D853A6D2B5A1cbb9bbf9d73994a03eFbD1cd"
   const contract_abi = abi.abi;
-  const uri = "https://ipfs.io/ipfs/Qmc2NJLkBumcL1G4VrYKn6b1rFm1EVvA7RHsh1TdqZTfXG/";
+  const uri = "https://ipfs.io/ipfs/bafybeihtixxgkce64vg6fe32v2knumoprw24qje543mvoroirenbjnjrxi/";
+  
 
   async function mintnft(){
     
-      if (window.ethereum) {
+      
         const provider = new ethers.BrowserProvider(window.ethereum);
-        const signer = provider.getSigner();
+        const signer = await provider.getSigner();
         const nftcontract = new ethers.Contract(contract_address, contract_abi, signer)
 
         try {
           const mintAmount = 1;
           const mintjpg = await nftcontract.mint(mintAmount, uri, {
-            value: BigInt("1000000000000000") * BigInt(mintAmount),
+            value: BigInt("100000000000000") * BigInt(mintAmount),
           });
+          console.log(mintjpg)
           console.log("Cunhando...espere por favor.")
           
           await mintjpg.wait()
@@ -30,7 +32,6 @@ const MintButton = () => {
       
     } catch (erro) {
       console.log('Erro encontrado', erro)
-    }
   }
 
   }
