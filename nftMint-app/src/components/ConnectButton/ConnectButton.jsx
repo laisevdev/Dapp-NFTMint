@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const ConnectButton = () => {
 
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("Conectar Carteira");
 
   async function connectWallet(){
     setMessage("")    
@@ -23,9 +23,8 @@ const ConnectButton = () => {
 
   return (
     <div> 
-        <button type='button' onClick={connectWallet}>Conectar Carteira</button> 
+        <button type='button' onClick={connectWallet}>{message}</button> 
         <br/>
-        <p>{message}</p>
     </div>
   
   )
