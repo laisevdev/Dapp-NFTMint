@@ -1,0 +1,20 @@
+* {
+    margin: 0px;
+    padding: 0 px;
+    box-sizing: border-box;
+}
+
+p {
+    width: 100%;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    font-size: 14px;
+}
+
+span:hover {
+    color: blueviolet;
+    cursor: pointer;
+    font-size: 16px;
+}
