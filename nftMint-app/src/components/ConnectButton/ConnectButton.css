@@ -21,6 +21,8 @@ button {
   }
 
   @media (max-width:1024px) {
-    button {margin-right: 25px;
+    button {
+      margin-right: 25px;
   }
 }
+
