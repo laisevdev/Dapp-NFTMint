@@ -33,19 +33,42 @@
     }
 
     .gradient, h1 {
-        font-size: 22px;
+        font-size: 26px;
         margin: 0;
     }
 }
 
 @media (max-width:768px) {
     .gradient, h1 {
-        font-size: 18px;
+        font-size: 22px;
     }
 }
 
 @media (max-width:480px) {
+
+    .navbar {
+        max-width: 414px;
+        min-width: 360px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: 0 auto;
+    
+     }
+     
     .gradient, h1 {
+        width: 100%;
         font-size: 20px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 0 15px 0;
+    }
+
+    div .connect-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
