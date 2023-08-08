@@ -16,7 +16,9 @@ const Navbar = () => {
 
           <h1 className='gradient'>New Collection @NFTNoob</h1>
 
-          <ConnectButton />
+          <div className='connect-btn'>
+            <ConnectButton />
+          </div>
 
         </nav>
       </>  
