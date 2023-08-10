@@ -4,15 +4,15 @@
     margin-right: 60px;
     cursor: pointer;
 
-    /*animation: rotacao 25s linear infinite; */
+    animation: rotacao 25s linear infinite;
 }
 
-/*@keyframes rotacao {
+@keyframes rotacao {
        to {
         transform: rotate(360deg);
     }
 }
-*/
+
 
 @media (max-width:768px) {
     .image {
